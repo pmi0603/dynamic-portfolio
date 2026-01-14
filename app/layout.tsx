@@ -1,20 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Ubuntu } from "next/font/google" // Import Ubuntu font
+import { Ubuntu } from "next/font/google" 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 // Configure the Ubuntu font
 const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"], // Specify desired weights
-  variable: "--font-sans", // Link to the --font-sans CSS variable
+  weight: ["300", "400", "500", "700"], 
+  variable: "--font-sans", 
 })
 
 export const metadata: Metadata = {
-  title: "Prashant Mishra", // Updated title for clarity
-  description: "Dynamic HR Portfolio showcasing Prashant Mishra's skills and projects.", // Updated description
-  generator: "v0.dev",
+  title: "Prashant Mishra", 
+  description: "Dynamic HR Portfolio.", 
+  generator: "",
 }
 
 export default function RootLayout({

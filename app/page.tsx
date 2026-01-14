@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { ChevronDown, Download, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Globe, Zap, Award, Star, Sun, Moon, Laptop } from 'lucide-react'
+import { ChevronDown, Download, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Globe, Zap, Award, Star, Sun, Moon, Laptop, Cloud, Shield, Monitor } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { useTheme } from "next-themes"
-import DeveloperLogo from "@/components/developer-logo" // Import the new component
+import DeveloperLogo from "@/components/developer-logo" 
 
 export default function Portfolio() {
   const { theme, setTheme } = useTheme()
@@ -53,21 +53,21 @@ export default function Portfolio() {
   }, [mounted])
 
   const skills = [
-    { name: "C/C++", level: 80, icon: Code, category: "Programming" },
-    { name: "Python", level: 75, icon: Code, category: "Programming" },
-    { name: "JavaScript", level: 85, icon: Code, category: "Programming" },
-    { name: "PHP", level: 70, icon: Code, category: "Programming" },
-    { name: "React.js", level: 80, icon: Globe, category: "Web" },
-    { name: "Express.js", level: 75, icon: Globe, category: "Web" },
-    { name: "HTML/CSS", level: 90, icon: Globe, category: "Web" },
-    { name: "MongoDB", level: 75, icon: Database, category: "Database" },
-    { name: "SQL/MySQL", level: 80, icon: Database, category: "Database" },
-    { name: "Git/GitHub", level: 85, icon: Code, category: "Tools" },
-    { name: "Jenkins (CI/CD)", level: 65, icon: Zap, category: "Tools" },
-    { name: "MATLAB", level: 70, icon: Code, category: "Tools" },
-    { name: "Excel", level: 75, icon: Database, category: "Tools" },
-    { name: "Data Structures & Algorithms", level: 80, icon: Database, category: "Core" },
-    { name: "Machine Learning", level: 72, icon: Zap, category: "AI/ML" },
+    { name: "C/C++", icon: Code, category: "Programming" },
+    { name: "Python",  icon: Code, category: "Programming" },
+    { name: "JavaScript",  icon: Code, category: "Programming" },
+    { name: "PHP",  icon: Code, category: "Programming" },
+    { name: "React.js",  icon: Globe, category: "Web" },
+    { name: "Express.js",  icon: Globe, category: "Web" },
+    { name: "HTML/CSS",  icon: Globe, category: "Web" },
+    { name: "MongoDB",  icon: Database, category: "Database" },
+    { name: "SQL/MySQL",  icon: Database, category: "Database" },
+    { name: "Git/GitHub",  icon: Code, category: "Tools" },
+    { name: "Jenkins (CI/CD)",  icon: Zap, category: "Tools" },
+    { name: "MATLAB",  icon: Code, category: "Tools" },
+    { name: "Excel",  icon: Database, category: "Tools" },
+    { name: "Data Structures & Algorithms",  icon: Database, category: "Core" },
+    { name: "Machine Learning", icon: Zap, category: "AI/ML" },
   ]
 
   const isDayMode = theme === "light"
@@ -100,7 +100,7 @@ export default function Portfolio() {
   }
 
   const projects = [
-    {
+    { 
       title: "AI-Powered Information Retrieval Agent",
       description: "Automated web data extraction tool using AI for entity-based queries and real-time data processing",
       tech: ["Python", "OpenAI GPT", "Streamlit", "Google Sheets API", "ScraperAPI"],
@@ -129,17 +129,17 @@ export default function Portfolio() {
       ],
     },
     {
-      title: "Online Voting System",
-      description: "Secure web-based voting platform with robust authentication and real-time results",
-      tech: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"],
+      title: "Task Manager",
+      description: "Web based application to add/update/delete(CRUD operations), storing task in database ",
+      tech: ["Reactjs", "Nodejs", "MongoDB", "JavaScript"],
       status: "Completed",
-      impact: "50% reduction in security incidents",
+      impact: "Strengthen the backend and gain hand on database working",
       date: "Feb 2023 - Apr 2023",
-      githubUrl: "https://github.com/pmi0603/Audio-Translator",
+      githubUrl: "https://github.com/pmi0603/Task_Manager",
       highlights: [
-        "Industry-standard user authentication protocol",
-        "30% reduction in voting errors through validation",
-        "Agile dashboard with one-vote-per-user enforcement",
+        "Full-stack task management system with React frontend and Express–MongoDB backend supporting real-time CRUD operations",
+        "Responsive card-based UI with clean layout, edit/delete actions, and overflow-safe task descriptions",
+        "RESTful API integration using Axios with proper CORS handling and environment-based configuration",
       ],
     },
     {
@@ -173,7 +173,14 @@ export default function Portfolio() {
 
   const certificationsAndAchievements = [
     {
-      icon: Award,
+      icon: Cloud,
+      title: "AZ900 Fundamental",
+      description: "Professional certification in cloud computing fundamentals",
+      type: "certification",
+      link: " https://learn.microsoft.com/en-us/users/prashantmishra-7736/credentials/d0a71d00ebbce9cf",
+      issuer: "Microsoft",
+    },    {
+      icon: Cloud,
       title: "Google Cloud Computing Foundation",
       description: "Professional certification in cloud computing fundamentals",
       type: "certification",
@@ -181,33 +188,14 @@ export default function Portfolio() {
       issuer: "Google Cloud",
     },
     {
-      icon: Star,
+      icon: Shield,
       title: "Google Cybersecurity Professional",
       description: "Comprehensive cybersecurity certification program",
       type: "certification",
       link: "https://www.coursera.org/account/accomplishments/professional-cert/064D9ADMTVZG",
       issuer: "Google via Coursera",
     },
-    {
-      icon: Code,
-      title: "5+ Projects Delivered",
-      description: "Full-stack applications with AI/ML integration",
-      type: "achievement",
-    },
-    {
-      icon: Star,
-      title: "Client Satisfaction",
-      description: "98% positive feedback on delivered projects",
-      type: "achievement",
-    },
-    {
-      icon: Database,
-      title: "Technology Business Incubator",
-      description: "Certified Full-Stack Developer",
-      type: "certification",
-      link: "https://drive.google.com/file/d/1_oUiUHjoXg52SZA6LALa6-lIky-ZNVkd/view?pli=1",
-      issuer: "TBI Certification",
-    },
+
   ]
 
   const titles = ["Prashant", "Developer", "Problem Solver", "Tech Enthusiast"]
@@ -273,11 +261,10 @@ export default function Portfolio() {
       >
         <Button
           onClick={() => setTheme(isDayMode ? "dark" : "light")}
-          className={`w-14 h-14 rounded-full ${
-            isDayMode
+          className={`w-14 h-14 rounded-full ${isDayMode
               ? "bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600"
               : "bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700"
-          } shadow-lg transition-all duration-500 group`}
+            } shadow-lg transition-all duration-500 group`}
           size="icon"
         >
           <motion.div animate={{ rotate: isDayMode ? 0 : 180 }} transition={{ duration: 0.5 }}>
@@ -290,9 +277,8 @@ export default function Portfolio() {
       {mounted && (
         <>
           <div
-            className={`fixed w-6 h-6 ${
-              isDayMode ? "bg-orange-400/40" : "bg-pink-500/30"
-            } rounded-full pointer-events-none z-50 transition-all duration-300 ease-out`}
+            className={`fixed w-6 h-6 ${isDayMode ? "bg-orange-400/40" : "bg-pink-500/30"
+              } rounded-full pointer-events-none z-50 transition-all duration-300 ease-out`}
             style={{
               left: mousePosition.x - 12,
               top: mousePosition.y - 12,
@@ -300,9 +286,8 @@ export default function Portfolio() {
             }}
           />
           <div
-            className={`fixed w-3 h-3 ${
-              isDayMode ? "bg-yellow-400/60" : "bg-purple-400/50"
-            } rounded-full pointer-events-none z-50 transition-all duration-500 ease-out`}
+            className={`fixed w-3 h-3 ${isDayMode ? "bg-yellow-400/60" : "bg-purple-400/50"
+              } rounded-full pointer-events-none z-50 transition-all duration-500 ease-out`}
             style={{
               left: mousePosition.x - 6,
               top: mousePosition.y - 6,
@@ -312,17 +297,17 @@ export default function Portfolio() {
         </>
       )}
 
-      {/* Enhanced Animated Background - only render if mounted */}
+    
       {mounted && (
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
           {isDayMode ? (
-            // Day Mode Background
+           
             <>
               <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
               <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-500"></div>
 
-              {/* Sun Rays */}
+             
               {[...Array(8)].map((_, i) => (
                 <motion.div
                   key={i}
@@ -344,13 +329,13 @@ export default function Portfolio() {
               ))}
             </>
           ) : (
-            // Night Mode Background
+           
             <>
               <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
               <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-500"></div>
 
-              {/* Twinkling Stars */}
+              
               {[...Array(50)].map((_, i) => (
                 <motion.div
                   key={i}
@@ -373,7 +358,7 @@ export default function Portfolio() {
             </>
           )}
 
-          {/* Floating Particles */}
+        
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
@@ -397,7 +382,7 @@ export default function Portfolio() {
         </div>
       )}
 
-      {/* Navigation */}
+      
       <nav
         className={`fixed top-0 left-0 right-0 z-50 ${themeStyles.navBg} backdrop-blur-md border-b ${themeStyles.navBorder} transition-all duration-500`}
       >
@@ -406,15 +391,14 @@ export default function Portfolio() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className={`text-lg sm:text-xl font-bold bg-gradient-to-r ${
-                isDayMode ? "from-orange-600 to-red-600" : "from-pink-500 to-orange-500"
-              } bg-clip-text text-transparent transition-all duration-500`}
+              className={`text-lg sm:text-xl font-bold bg-gradient-to-r ${isDayMode ? "from-orange-600 to-red-600" : "from-pink-500 to-orange-500"
+                } bg-clip-text text-transparent transition-all duration-500`}
             >
               Prashant Mishra
             </motion.div>
             <div className="hidden md:flex space-x-4 lg:space-x-6">
               {[
-                { name: "About", href: "#hero" },
+                { name: "About", href: "#about" },
                 { name: "Experience", href: "#experience" },
                 { name: "Skills", href: "#skills" },
                 { name: "Projects", href: "#projects" },
@@ -426,15 +410,13 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`${
-                    isDayMode ? "hover:text-orange-600" : "hover:text-pink-400"
-                  } transition-colors cursor-pointer text-sm lg:text-base relative group`}
+                  className={`${isDayMode ? "hover:text-orange-600" : "hover:text-pink-400"
+                    } transition-colors cursor-pointer text-sm lg:text-base relative group`}
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 w-0 h-0.5 ${
-                      isDayMode ? "bg-orange-600" : "bg-pink-400"
-                    } transition-all duration-300 group-hover:w-full`}
+                    className={`absolute -bottom-1 left-0 w-0 h-0.5 ${isDayMode ? "bg-orange-600" : "bg-pink-400"
+                      } transition-all duration-300 group-hover:w-full`}
                   ></span>
                 </motion.a>
               ))}
@@ -443,7 +425,7 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* About Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20 px-4 sm:px-6">
         <div className="container mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl">
           <motion.div
@@ -457,9 +439,8 @@ export default function Portfolio() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className={`flex items-center justify-center lg:justify-start space-x-2 text-sm ${
-                  isDayMode ? "text-gray-600" : "text-gray-300"
-                }`}
+                className={`flex items-center justify-center lg:justify-start space-x-2 text-sm ${isDayMode ? "text-gray-600" : "text-gray-300"
+                  }`}
               >
                 <motion.div
                   className={`w-2 h-2 ${isDayMode ? "bg-green-600" : "bg-green-500"} rounded-full`}
@@ -483,9 +464,8 @@ export default function Portfolio() {
                 </span>
                 <br />
                 <span
-                  className={`bg-gradient-to-r ${
-                    isDayMode ? "from-orange-600 via-red-600 to-pink-600" : "from-pink-500 via-purple-500 to-orange-500"
-                  } bg-clip-text text-transparent`}
+                  className={`bg-gradient-to-r ${isDayMode ? "from-orange-600 via-red-600 to-pink-600" : "from-pink-500 via-purple-500 to-orange-500"
+                    } bg-clip-text text-transparent`}
                 >
                   I'm {displayedText}
                   <motion.span
@@ -505,16 +485,14 @@ export default function Portfolio() {
                 className="space-y-2"
               >
                 <h2
-                  className={`text-xl sm:text-2xl lg:text-3xl font-semibold ${
-                    isDayMode ? "text-gray-800" : "text-gray-200"
-                  }`}
+                  className={`text-xl sm:text-2xl lg:text-3xl font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                    }`}
                 >
                   Full-Stack Developer & DevOps Enthusiast
                 </h2>
                 <p
-                  className={`text-base lg:text-lg ${
-                    isDayMode ? "text-gray-600" : "text-gray-400"
-                  } max-w-2xl mx-auto lg:mx-0`}
+                  className={`text-base lg:text-lg ${isDayMode ? "text-gray-600" : "text-gray-400"
+                    } max-w-2xl mx-auto lg:mx-0`}
                 >
                   Computer Science Graduate from Graphic Era Hill University, passionate about creating scalable web
                   applications and optimizing development workflows.
@@ -528,42 +506,24 @@ export default function Portfolio() {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button
-                size="lg"
-                className={`bg-gradient-to-r ${
-                  isDayMode
-                    ? "from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
-                    : "from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
-                } w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
-                onClick={() => window.open("mailto:prashantmishra06032003@gmail.com")}
-              >
-                <span
-                  className={`absolute inset-0 bg-gradient-to-r ${
-                    isDayMode ? "from-orange-600 to-red-700" : "from-pink-600 to-purple-700"
-                  } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
-                ></span>
-                <Mail className="w-4 h-4 mr-2 relative z-10" />
-                <span className="relative z-10">Get In Touch</span>
-              </Button>
+
               <Button
                 size="lg"
                 variant="outline"
-                className={`${
-                  isDayMode
+                className={`${isDayMode
                     ? "border-orange-400/50 bg-white/50 text-orange-700 hover:bg-white/70 hover:border-orange-500/70"
                     : "border-purple-500/30 bg-slate-800/50 text-purple-200 hover:bg-slate-700/70 hover:border-purple-400/50"
-                } backdrop-blur-sm w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
+                  } backdrop-blur-sm w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
                 onClick={() => {
                   const link = document.createElement("a")
-                  link.href = "/resume/Prashant_Mishra_Resume.pdf"
-                  link.download = "Prashant_Mishra_Resume.pdf"
+                  link.href = "/resume/PrashantMishra.pdf"
+                  link.download = "PrashantMishra.pdf"
                   link.click()
                 }}
               >
                 <span
-                  className={`absolute inset-0 ${
-                    isDayMode ? "bg-orange-500/20" : "bg-purple-600/20"
-                  } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
+                  className={`absolute inset-0 ${isDayMode ? "bg-orange-500/20" : "bg-purple-600/20"
+                    } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
                 ></span>
                 <Download className="w-4 h-4 mr-2 relative z-10" />
                 <span className="relative z-10">Download Resume</span>
@@ -574,17 +534,15 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className={`flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 ${
-                isDayMode ? "text-gray-600" : "text-gray-300"
-              }`}
+              className={`flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 ${isDayMode ? "text-gray-600" : "text-gray-300"
+                }`}
             >
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
                 <a
                   href="tel:+917973745181"
-                  className={`text-sm lg:text-base ${
-                    isDayMode ? "hover:text-orange-600" : "hover:text-pink-400"
-                  } transition-colors cursor-pointer`}
+                  className={`text-sm lg:text-base ${isDayMode ? "hover:text-orange-600" : "hover:text-pink-400"
+                    } transition-colors cursor-pointer`}
                 >
                   7973745181
                 </a>
@@ -602,7 +560,7 @@ export default function Portfolio() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative flex justify-center lg:justify-end"
           >
-            <DeveloperLogo size={300} /> {/* Use the new DeveloperLogo component */}
+            <DeveloperLogo size={300} /> 
           </motion.div>
         </div>
 
@@ -629,7 +587,7 @@ export default function Portfolio() {
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Professional Experience</h2>
             <p className={`${isDayMode ? "text-gray-600" : "text-gray-400"} max-w-2xl mx-auto text-sm lg:text-base`}>
-              Hands-on internship experience in full-stack development and cross-functional collaboration
+
             </p>
           </motion.div>
 
@@ -637,9 +595,8 @@ export default function Portfolio() {
             <div className="relative">
               {/* Animated Timeline Line */}
               <motion.div
-                className={`absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b ${
-                  isDayMode ? "from-orange-500 to-red-600" : "from-pink-500 to-purple-600"
-                } transition-all duration-500`}
+                className={`absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b ${isDayMode ? "from-orange-500 to-red-600" : "from-pink-500 to-purple-600"
+                  } transition-all duration-500`}
                 initial={{ scaleY: 0 }}
                 whileInView={{ scaleY: 1 }}
                 viewport={{ once: true }}
@@ -649,6 +606,100 @@ export default function Portfolio() {
 
               {/* Experience Items */}
               <div className="space-y-8 lg:space-y-12">
+
+                {/* HCLTech */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="relative flex items-start space-x-4 sm:space-x-8"
+                >
+                  <motion.div
+                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${isDayMode ? "from-orange-500 to-red-600" : "from-pink-500 to-purple-600"
+                      } rounded-full flex items-center justify-center relative z-10 transition-all duration-500`}
+                    whileHover={{ scale: 1.1 }}
+                    animate={{
+                      boxShadow: isDayMode
+                        ? ["0 0 0 0 rgba(249, 115, 22, 0.4)", "0 0 0 10px rgba(249, 115, 22, 0)"]
+                        : ["0 0 0 0 rgba(236, 72, 153, 0.4)", "0 0 0 10px rgba(236, 72, 153, 0)"],
+                    }}
+                    transition={{
+                      boxShadow: { duration: 2, repeat: Number.POSITIVE_INFINITY },
+                    }}
+                  >
+                    <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                  </motion.div>
+                  <Card
+                    className={`flex-1 ${themeStyles.cardBg} ${themeStyles.cardBorder} ${themeStyles.cardHover} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${isDayMode ? "hover:shadow-orange-500/10" : "hover:shadow-purple-500/10"
+                      }`}
+                  >
+                    <CardContent className="p-4 sm:p-6">
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                        <div>
+                          <h3 className={`text-lg sm:text-xl font-bold ${themeStyles.text} mb-1`}>
+                            Graduate Engineer Trainee 
+                          </h3>
+                          <p
+                            className={`${isDayMode ? "text-orange-600" : "text-pink-400"
+                              } font-semibold text-sm sm:text-base`}
+                          >
+                            HCLTech
+                          </p>
+                        </div>
+                        <Badge
+                          variant="outline"
+                          className={`${isDayMode ? "text-orange-700 border-orange-400/50" : "text-purple-300 border-purple-400/50"
+                            } w-fit mt-2 lg:mt-0 text-xs sm:text-sm`}
+                        >
+                          Sep 2025 – Present
+                        </Badge>
+                      </div>
+
+                      <div className="space-y-4">
+                        <div>
+                          <h4
+                            className={`font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                              } mb-2 text-sm sm:text-base`}
+                          >
+                            Operational Responsibilities:
+                          </h4>
+                          <ul
+                            className={`${isDayMode ? "text-gray-700" : "text-gray-300"} space-y-1 text-xs sm:text-sm`}
+                          >
+                            <li>• Implementing and modifying security policies, NAT, and access rules</li>
+                            <li>• Managing and monitoring enterprise firewall infrastructure, performing traffic analysis and log monitoring for threat detection</li>
+                            <li>• Handling firewall change requests and incident response, ensuring compliance with security standards and best practices</li>
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h4
+                            className={`font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                              } mb-2 text-sm sm:text-base`}
+                          >
+                            Technologies Used:
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {["Palo Alto (PAN-OS)", "Check Point", "Firewall Policy Management, NAT, VPN (IPSec/SSL)", 
+                                       "Traffic & Threat Analysis", "Wireshark", "Linux", "ServiceNow"].map((tech) => (
+
+                              <Badge
+                                key={tech}
+                                variant="secondary"
+                                className={`text-xs ${isDayMode ? "bg-gray-200 text-gray-800" : "bg-slate-700 text-gray-300"
+                                  }`}
+                              >
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
                 {/* Integrated Maritime Exchange */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -657,9 +708,8 @@ export default function Portfolio() {
                   className="relative flex items-start space-x-4 sm:space-x-8"
                 >
                   <motion.div
-                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${
-                      isDayMode ? "from-orange-500 to-red-600" : "from-pink-500 to-purple-600"
-                    } rounded-full flex items-center justify-center relative z-10 transition-all duration-500`}
+                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${isDayMode ? "from-orange-500 to-red-600" : "from-pink-500 to-purple-600"
+                      } rounded-full flex items-center justify-center relative z-10 transition-all duration-500`}
                     whileHover={{ scale: 1.1 }}
                     animate={{
                       boxShadow: isDayMode
@@ -673,9 +723,8 @@ export default function Portfolio() {
                     <Code className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </motion.div>
                   <Card
-                    className={`flex-1 ${themeStyles.cardBg} ${themeStyles.cardBorder} ${themeStyles.cardHover} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${
-                      isDayMode ? "hover:shadow-orange-500/10" : "hover:shadow-purple-500/10"
-                    }`}
+                    className={`flex-1 ${themeStyles.cardBg} ${themeStyles.cardBorder} ${themeStyles.cardHover} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${isDayMode ? "hover:shadow-orange-500/10" : "hover:shadow-purple-500/10"
+                      }`}
                   >
                     <CardContent className="p-4 sm:p-6">
                       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -684,18 +733,16 @@ export default function Portfolio() {
                             Full Stack Developer Intern
                           </h3>
                           <p
-                            className={`${
-                              isDayMode ? "text-orange-600" : "text-pink-400"
-                            } font-semibold text-sm sm:text-base`}
+                            className={`${isDayMode ? "text-orange-600" : "text-pink-400"
+                              } font-semibold text-sm sm:text-base`}
                           >
                             Integrated Maritime Exchange
                           </p>
                         </div>
                         <Badge
                           variant="outline"
-                          className={`${
-                            isDayMode ? "text-orange-700 border-orange-400/50" : "text-purple-300 border-purple-400/50"
-                          } w-fit mt-2 lg:mt-0 text-xs sm:text-sm`}
+                          className={`${isDayMode ? "text-orange-700 border-orange-400/50" : "text-purple-300 border-purple-400/50"
+                            } w-fit mt-2 lg:mt-0 text-xs sm:text-sm`}
                         >
                           Dec 2024 – Jan 2025
                         </Badge>
@@ -704,9 +751,8 @@ export default function Portfolio() {
                       <div className="space-y-4">
                         <div>
                           <h4
-                            className={`font-semibold ${
-                              isDayMode ? "text-gray-800" : "text-gray-200"
-                            } mb-2 text-sm sm:text-base`}
+                            className={`font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                              } mb-2 text-sm sm:text-base`}
                           >
                             Key Responsibilities:
                           </h4>
@@ -721,9 +767,8 @@ export default function Portfolio() {
 
                         <div>
                           <h4
-                            className={`font-semibold ${
-                              isDayMode ? "text-gray-800" : "text-gray-200"
-                            } mb-2 text-sm sm:text-base`}
+                            className={`font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                              } mb-2 text-sm sm:text-base`}
                           >
                             Technologies Used:
                           </h4>
@@ -732,9 +777,8 @@ export default function Portfolio() {
                               <Badge
                                 key={tech}
                                 variant="secondary"
-                                className={`text-xs ${
-                                  isDayMode ? "bg-gray-200 text-gray-800" : "bg-slate-700 text-gray-300"
-                                }`}
+                                className={`text-xs ${isDayMode ? "bg-gray-200 text-gray-800" : "bg-slate-700 text-gray-300"
+                                  }`}
                               >
                                 {tech}
                               </Badge>
@@ -743,14 +787,12 @@ export default function Portfolio() {
                         </div>
 
                         <div
-                          className={`${isDayMode ? "bg-orange-50" : "bg-slate-800/50"} rounded-lg p-3 sm:p-4 border ${
-                            isDayMode ? "border-orange-200/50" : "border-purple-500/20"
-                          } transition-all duration-500`}
+                          className={`${isDayMode ? "bg-orange-50" : "bg-slate-800/50"} rounded-lg p-3 sm:p-4 border ${isDayMode ? "border-orange-200/50" : "border-purple-500/20"
+                            } transition-all duration-500`}
                         >
                           <h4
-                            className={`font-semibold ${
-                              isDayMode ? "text-green-700" : "text-green-400"
-                            } mb-2 text-sm sm:text-base`}
+                            className={`font-semibold ${isDayMode ? "text-green-700" : "text-green-400"
+                              } mb-2 text-sm sm:text-base`}
                           >
                             Experience Gained:
                           </h4>
@@ -773,9 +815,8 @@ export default function Portfolio() {
                   className="relative flex items-start space-x-4 sm:space-x-8"
                 >
                   <motion.div
-                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${
-                      isDayMode ? "from-blue-500 to-indigo-600" : "from-purple-500 to-blue-600"
-                    } rounded-full flex items-center justify-center relative z-10 transition-all duration-500`}
+                    className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${isDayMode ? "from-blue-500 to-indigo-600" : "from-purple-500 to-blue-600"
+                      } rounded-full flex items-center justify-center relative z-10 transition-all duration-500`}
                     whileHover={{ scale: 1.1 }}
                     animate={{
                       boxShadow: isDayMode
@@ -789,9 +830,8 @@ export default function Portfolio() {
                     <Database className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </motion.div>
                   <Card
-                    className={`flex-1 ${themeStyles.cardBg} ${themeStyles.cardBorder} ${themeStyles.cardHover} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${
-                      isDayMode ? "hover:shadow-blue-500/10" : "hover:shadow-purple-500/10"
-                    }`}
+                    className={`flex-1 ${themeStyles.cardBg} ${themeStyles.cardBorder} ${themeStyles.cardHover} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${isDayMode ? "hover:shadow-blue-500/10" : "hover:shadow-purple-500/10"
+                      }`}
                   >
                     <CardContent className="p-4 sm:p-6">
                       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -800,18 +840,16 @@ export default function Portfolio() {
                             Full Stack Developer Intern
                           </h3>
                           <p
-                            className={`${
-                              isDayMode ? "text-blue-600" : "text-purple-400"
-                            } font-semibold text-sm sm:text-base`}
+                            className={`${isDayMode ? "text-blue-600" : "text-purple-400"
+                              } font-semibold text-sm sm:text-base`}
                           >
                             Technology Business Incubator
                           </p>
                         </div>
                         <Badge
                           variant="outline"
-                          className={`${
-                            isDayMode ? "text-blue-700 border-blue-400/50" : "text-purple-300 border-purple-400/50"
-                          } w-fit mt-2 lg:mt-0 text-xs sm:text-sm`}
+                          className={`${isDayMode ? "text-blue-700 border-blue-400/50" : "text-purple-300 border-purple-400/50"
+                            } w-fit mt-2 lg:mt-0 text-xs sm:text-sm`}
                         >
                           July 2024 – Oct 2024
                         </Badge>
@@ -820,9 +858,8 @@ export default function Portfolio() {
                       <div className="space-y-4">
                         <div>
                           <h4
-                            className={`font-semibold ${
-                              isDayMode ? "text-gray-800" : "text-gray-200"
-                            } mb-2 text-sm sm:text-base`}
+                            className={`font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                              } mb-2 text-sm sm:text-base`}
                           >
                             Key Responsibilities:
                           </h4>
@@ -837,9 +874,8 @@ export default function Portfolio() {
 
                         <div>
                           <h4
-                            className={`font-semibold ${
-                              isDayMode ? "text-gray-800" : "text-gray-200"
-                            } mb-2 text-sm sm:text-base`}
+                            className={`font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                              } mb-2 text-sm sm:text-base`}
                           >
                             Technologies Used:
                           </h4>
@@ -849,9 +885,8 @@ export default function Portfolio() {
                                 <Badge
                                   key={tech}
                                   variant="secondary"
-                                  className={`text-xs ${
-                                    isDayMode ? "bg-gray-200 text-gray-800" : "bg-slate-700 text-gray-300"
-                                  }`}
+                                  className={`text-xs ${isDayMode ? "bg-gray-200 text-gray-800" : "bg-slate-700 text-gray-300"
+                                    }`}
                                 >
                                   {tech}
                                 </Badge>
@@ -861,14 +896,12 @@ export default function Portfolio() {
                         </div>
 
                         <div
-                          className={`${isDayMode ? "bg-blue-50" : "bg-slate-800/50"} rounded-lg p-3 sm:p-4 border ${
-                            isDayMode ? "border-blue-200/50" : "border-purple-500/20"
-                          } transition-all duration-500`}
+                          className={`${isDayMode ? "bg-blue-50" : "bg-slate-800/50"} rounded-lg p-3 sm:p-4 border ${isDayMode ? "border-blue-200/50" : "border-purple-500/20"
+                            } transition-all duration-500`}
                         >
                           <h4
-                            className={`font-semibold ${
-                              isDayMode ? "text-green-700" : "text-green-400"
-                            } mb-2 text-sm sm:text-base`}
+                            className={`font-semibold ${isDayMode ? "text-green-700" : "text-green-400"
+                              } mb-2 text-sm sm:text-base`}
                           >
                             Experience Gained:
                           </h4>
@@ -882,11 +915,10 @@ export default function Portfolio() {
                               href="https://drive.google.com/file/d/1_oUiUHjoXg52SZA6LALa6-lIky-ZNVkd/view?pli=1"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className={`${
-                                isDayMode
+                              className={`${isDayMode
                                   ? "text-yellow-600 hover:text-yellow-700"
                                   : "text-yellow-400 hover:text-yellow-300"
-                              } transition-colors text-xs sm:text-sm font-medium flex items-center space-x-1`}
+                                } transition-colors text-xs sm:text-sm font-medium flex items-center space-x-1`}
                             >
                               <span>View Certification</span>
                               <ExternalLink className="w-3 h-3" />
@@ -900,8 +932,8 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-16 lg:py-20 relative">
@@ -972,15 +1004,15 @@ export default function Portfolio() {
                               </motion.div>
                               <h4 className={`font-semibold ${themeStyles.text} text-xs lg:text-sm`}>{skill.name}</h4>
                             </div>
-                            <Progress value={skill.level} className="h-1.5 lg:h-2 mb-2" />
+                            
                             <div className="flex justify-between items-center">
                               <span className={`text-xs ${isDayMode ? "text-gray-600" : "text-gray-400"}`}>
-                                {skill.level}% Proficiency
+                                
                               </span>
                               <span
                                 className={`text-xs font-medium bg-gradient-to-r ${config.color} bg-clip-text text-transparent`}
                               >
-                                {skill.level >= 80 ? "Advanced" : skill.level >= 70 ? "Intermediate" : "Beginner"}
+                                
                               </span>
                             </div>
                           </CardContent>
@@ -993,65 +1025,7 @@ export default function Portfolio() {
             })}
           </div>
 
-          {/* Skills Summary */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-            className="mt-12 lg:mt-16 text-center"
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 max-w-4xl mx-auto">
-              <motion.div
-                className={`${themeStyles.cardBg} rounded-lg p-4 lg:p-6 border ${themeStyles.cardBorder} transition-all duration-500`}
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: isDayMode ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.1)",
-                }}
-              >
-                <div
-                  className={`text-2xl lg:text-3xl font-bold ${isDayMode ? "text-orange-600" : "text-pink-400"} mb-2`}
-                >
-                  {skills.length}+
-                </div>
-                <p className={`${isDayMode ? "text-gray-700" : "text-gray-300"} text-sm lg:text-base`}>
-                  Technologies Mastered
-                </p>
-              </motion.div>
-              <motion.div
-                className={`${themeStyles.cardBg} rounded-lg p-4 lg:p-6 border ${themeStyles.cardBorder} transition-all duration-500`}
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: isDayMode ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.1)",
-                }}
-              >
-                <div
-                  className={`text-2xl lg:text-3xl font-bold ${isDayMode ? "text-blue-600" : "text-purple-400"} mb-2`}
-                >
-                  {Math.round(skills.reduce((acc, skill) => acc + skill.level, 0) / skills.length)}%
-                </div>
-                <p className={`${isDayMode ? "text-gray-700" : "text-gray-300"} text-sm lg:text-base`}>
-                  Average Proficiency
-                </p>
-              </motion.div>
-              <motion.div
-                className={`${themeStyles.cardBg} rounded-lg p-4 lg:p-6 border ${themeStyles.cardBorder} transition-all duration-500`}
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: isDayMode ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.1)",
-                }}
-              >
-                <div
-                  className={`text-2xl lg:text-3xl font-bold ${isDayMode ? "text-green-600" : "text-orange-400"} mb-2`}
-                >
-                  {Object.keys(skillCategories).length}
-                </div>
-                <p className={`${isDayMode ? "text-gray-700" : "text-gray-300"} text-sm lg:text-base`}>
-                  Skill Categories
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
+
         </div>
       </section>
 
@@ -1066,7 +1040,7 @@ export default function Portfolio() {
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Featured Projects</h2>
             <p className={`${isDayMode ? "text-gray-600" : "text-gray-400"} max-w-2xl mx-auto text-sm lg:text-base`}>
-              Showcasing AI/ML expertise, full-stack development, and impactful solutions with measurable business value
+              Showcasing expertise in AI/ML and full-stack development 
             </p>
           </motion.div>
 
@@ -1089,16 +1063,14 @@ export default function Portfolio() {
                   className={`${themeStyles.cardBg} ${themeStyles.cardBorder} ${themeStyles.cardHover} transition-all duration-300 h-full group relative overflow-hidden`}
                 >
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${
-                      isDayMode ? "from-orange-500/10 to-red-500/10" : "from-pink-500/10 to-purple-500/10"
-                    } opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    className={`absolute inset-0 bg-gradient-to-r ${isDayMode ? "from-orange-500/10 to-red-500/10" : "from-pink-500/10 to-purple-500/10"
+                      } opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                   />
                   <CardHeader className="p-4 lg:p-6 relative z-10">
                     <div className="flex justify-between items-start mb-2">
                       <CardTitle
-                        className={`${themeStyles.text} text-base lg:text-lg ${
-                          isDayMode ? "group-hover:text-orange-600" : "group-hover:text-pink-400"
-                        } transition-colors`}
+                        className={`${themeStyles.text} text-base lg:text-lg ${isDayMode ? "group-hover:text-orange-600" : "group-hover:text-pink-400"
+                          } transition-colors`}
                       >
                         {project.title}
                       </CardTitle>
@@ -1122,9 +1094,8 @@ export default function Portfolio() {
                     {/* Key Highlights */}
                     <div>
                       <h4
-                        className={`text-xs lg:text-sm font-semibold ${
-                          isDayMode ? "text-gray-800" : "text-gray-200"
-                        } mb-2`}
+                        className={`text-xs lg:text-sm font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                          } mb-2`}
                       >
                         Key Features:
                       </h4>
@@ -1147,9 +1118,8 @@ export default function Portfolio() {
                     {/* Technologies */}
                     <div>
                       <h4
-                        className={`text-xs lg:text-sm font-semibold ${
-                          isDayMode ? "text-gray-800" : "text-gray-200"
-                        } mb-2`}
+                        className={`text-xs lg:text-sm font-semibold ${isDayMode ? "text-gray-800" : "text-gray-200"
+                          } mb-2`}
                       >
                         Technologies:
                       </h4>
@@ -1163,9 +1133,8 @@ export default function Portfolio() {
                           >
                             <Badge
                               variant="outline"
-                              className={`text-xs px-2 py-1 ${
-                                isDayMode ? "hover:bg-gray-100" : "hover:bg-white/10"
-                              } transition-colors`}
+                              className={`text-xs px-2 py-1 ${isDayMode ? "hover:bg-gray-100" : "hover:bg-white/10"
+                                } transition-colors`}
                             >
                               {tech}
                             </Badge>
@@ -1184,11 +1153,10 @@ export default function Portfolio() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className={`${
-                          isDayMode
+                        className={`${isDayMode
                             ? "text-orange-600 hover:text-orange-700 hover:bg-orange-50"
                             : "text-pink-400 hover:text-pink-300 hover:bg-pink-400/10"
-                        } p-2 transition-all duration-300`}
+                          } p-2 transition-all duration-300`}
                         onClick={() => project.githubUrl && window.open(project.githubUrl, "_blank")}
                         disabled={!project.githubUrl}
                       >
@@ -1271,21 +1239,19 @@ export default function Portfolio() {
                   className={`${themeStyles.cardBg} ${themeStyles.cardBorder} ${themeStyles.cardHover} transition-all duration-300 h-full relative overflow-hidden`}
                 >
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${
-                      isDayMode ? "from-blue-500/5 to-purple-500/5" : "from-blue-500/5 to-purple-500/5"
-                    } opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    className={`absolute inset-0 bg-gradient-to-br ${isDayMode ? "from-blue-500/5 to-purple-500/5" : "from-blue-500/5 to-purple-500/5"
+                      } opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                   />
                   <CardContent className="p-4 lg:p-6 text-center relative z-10">
                     <motion.div
-                      className={`${
-                        item.type === "certification"
+                      className={`${item.type === "certification"
                           ? isDayMode
                             ? "bg-gradient-to-r from-blue-600 to-cyan-600"
                             : "bg-gradient-to-r from-blue-500 to-cyan-500"
                           : isDayMode
                             ? "bg-gradient-to-r from-orange-600 to-red-600"
                             : "bg-gradient-to-r from-pink-500 to-purple-600"
-                      } w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}
+                        } w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
@@ -1301,15 +1267,14 @@ export default function Portfolio() {
                       <div className="mb-4">
                         <Badge
                           variant="outline"
-                          className={`${
-                            item.type === "certification"
+                          className={`${item.type === "certification"
                               ? isDayMode
                                 ? "border-blue-400/50 text-blue-700"
                                 : "border-blue-400/50 text-blue-300"
                               : isDayMode
                                 ? "border-orange-400/50 text-orange-700"
                                 : "border-purple-400/50 text-purple-300"
-                          } text-xs`}
+                            } text-xs`}
                         >
                           {item.issuer}
                         </Badge>
@@ -1321,9 +1286,8 @@ export default function Portfolio() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`inline-flex items-center space-x-2 ${
-                          isDayMode ? "text-blue-600 hover:text-blue-700" : "text-blue-400 hover:text-blue-300"
-                        } transition-colors text-xs lg:text-sm font-medium`}
+                        className={`inline-flex items-center space-x-2 ${isDayMode ? "text-blue-600 hover:text-blue-700" : "text-blue-400 hover:text-blue-300"
+                          } transition-colors text-xs lg:text-sm font-medium`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -1357,7 +1321,8 @@ export default function Portfolio() {
                   {certificationsAndAchievements.filter((item) => item.type === "certification").length}
                 </div>
                 <p className={`${isDayMode ? "text-gray-700" : "text-gray-300"} text-sm lg:text-base`}>
-                  Professional Certifications
+                  Professional Certifications    
+                  
                 </p>
               </motion.div>
               <motion.div
@@ -1415,34 +1380,30 @@ export default function Portfolio() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
                 size="lg"
-                className={`bg-gradient-to-r ${
-                  isDayMode
+                className={`bg-gradient-to-r ${isDayMode
                     ? "from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
                     : "from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
-                } w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
+                  } w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
                 onClick={() => window.open("mailto:prashantmishra06032003@gmail.com")}
               >
                 <span
-                  className={`absolute inset-0 bg-gradient-to-r ${
-                    isDayMode ? "from-orange-600 to-red-700" : "from-pink-600 to-purple-700"
-                  } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
+                  className={`absolute inset-0 bg-gradient-to-r ${isDayMode ? "from-orange-600 to-red-700" : "from-pink-600 to-purple-700"
+                    } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
                 ></span>
                 <Mail className="w-5 h-5 mr-2 relative z-10" />
                 <span className="relative z-10">prashantmishra06032003@gmail.com</span>
               </Button>
               <Button
                 size="lg"
-                className={`${
-                  isDayMode
+                className={`${isDayMode
                     ? "bg-white/60 border border-orange-400/50 text-orange-700 hover:bg-white/80 hover:border-orange-500/70"
                     : "bg-slate-800/60 border border-purple-500/30 text-purple-200 hover:bg-slate-700/80 hover:border-purple-400/50"
-                } backdrop-blur-sm w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
+                  } backdrop-blur-sm w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
                 onClick={() => window.open("tel:+917973745181")}
               >
                 <span
-                  className={`absolute inset-0 ${
-                    isDayMode ? "bg-orange-500/20" : "bg-purple-600/20"
-                  } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
+                  className={`absolute inset-0 ${isDayMode ? "bg-orange-500/20" : "bg-purple-600/20"
+                    } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
                 ></span>
                 <Phone className="w-5 h-5 mr-2 relative z-10" />
                 <span className="relative z-10">+91 7973745181</span>
@@ -1461,11 +1422,10 @@ export default function Portfolio() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={`${
-                    isDayMode
+                  className={`${isDayMode
                       ? "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                       : "text-gray-400 hover:text-white hover:bg-gray-800/50"
-                  } transition-all duration-300 group-hover:scale-110`}
+                    } transition-all duration-300 group-hover:scale-110`}
                 >
                   <Github className="w-6 h-6" />
                 </Button>
@@ -1481,11 +1441,10 @@ export default function Portfolio() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={`${
-                    isDayMode
+                  className={`${isDayMode
                       ? "text-gray-600 hover:text-[#0077B5] hover:bg-[#0077B5]/10"
                       : "text-gray-400 hover:text-white hover:bg-[#0077B5]/10"
-                  } transition-all duration-300 group-hover:scale-110`}
+                    } transition-all duration-300 group-hover:scale-110`}
                 >
                   <Linkedin className="w-6 h-6" />
                 </Button>
@@ -1502,11 +1461,10 @@ export default function Portfolio() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={`${
-                    isDayMode
+                  className={`${isDayMode
                       ? "text-gray-600 hover:text-[#FFA116] hover:bg-[#FFA116]/10"
                       : "text-gray-400 hover:text-[#FFA116] hover:bg-[#FFA116]/10"
-                  } transition-all duration-300 group-hover:scale-110`}
+                    } transition-all duration-300 group-hover:scale-110`}
                 >
                   <Laptop className="w-6 h-6" />
                 </Button>
@@ -1523,11 +1481,10 @@ export default function Portfolio() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={`${
-                    isDayMode
+                  className={`${isDayMode
                       ? "text-gray-600 hover:text-[#5B4638] hover:bg-[#5B4638]/10"
                       : "text-gray-400 hover:text-[#5B4638] hover:bg-[#5B4638]/10"
-                  } transition-all duration-300 group-hover:scale-110`}
+                    } transition-all duration-300 group-hover:scale-110`}
                 >
                   <Laptop className="w-6 h-6" />
                 </Button>
@@ -1539,9 +1496,8 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer
-        className={`py-6 lg:py-8 border-t ${
-          isDayMode ? "border-gray-200/50" : "border-white/10"
-        } transition-all duration-500`}
+        className={`py-6 lg:py-8 border-t ${isDayMode ? "border-gray-200/50" : "border-white/10"
+          } transition-all duration-500`}
       >
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <p className={`text-sm lg:text-base ${isDayMode ? "text-gray-600" : "text-gray-400"}`}>

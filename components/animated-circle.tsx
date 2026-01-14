@@ -148,21 +148,7 @@ export default function AnimatedCircle({ size = 300, strokeWidth = 4 }: Animated
         />
       </motion.svg>
 
-      {/* "PM" Text in the center */}
-      <motion.div
-        className={`text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r ${
-          isDayMode ? "from-orange-600 to-red-600" : "from-pink-500 to-orange-500"
-        } bg-clip-text text-transparent transition-all duration-500 relative z-10`}
-        animate={{
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Number.POSITIVE_INFINITY,
-        }}
-      >
-        PM
-      </motion.div>
+
     </div>
   )
 }

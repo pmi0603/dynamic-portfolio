@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
-import { Code, Brackets, Terminal, GitBranch, Cpu, Cloud, Database, Zap } from 'lucide-react'
+import { Code, Terminal, GitBranch, Cpu, Cloud, Database, Zap, Shield } from 'lucide-react'
 
 interface DeveloperLogoProps {
   size?: number
@@ -12,7 +12,7 @@ export default function DeveloperLogo({ size = 300 }: DeveloperLogoProps) {
   const { theme } = useTheme()
   const isDayMode = theme === "light"
 
-  const icons = [Brackets, Terminal, GitBranch, Cpu, Cloud, Database, Zap] // Icons to orbit
+  const icons = [Shield, Terminal, GitBranch, Cpu, Cloud, Database, Zap] // Icons to orbit
 
   return (
     <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>
