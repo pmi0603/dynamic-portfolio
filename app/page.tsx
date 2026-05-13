@@ -516,8 +516,8 @@ export default function Portfolio() {
                   } backdrop-blur-sm w-full sm:w-auto relative overflow-hidden group transition-all duration-500`}
                 onClick={() => {
                   const link = document.createElement("a")
-                  link.href = "/resume/PrashantMishra.pdf"
-                  link.download = "PrashantMishra.pdf"
+                  link.href = "/resume/Prashant-Mishra.pdf"
+                  link.download = "Prashant-Mishra.pdf"
                   link.click()
                 }}
               >
